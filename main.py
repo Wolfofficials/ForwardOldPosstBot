@@ -4,6 +4,8 @@ import asyncio
 from telethon.sessions import StringSession
 from creds import api_id, api_hash, session_string, source_channel_id, destination_channel_id
 
+
+
 # Define the file to store the last offset and the set to store forwarded post IDs
 offset_file = 'last_offset.txt'
 forwarded_post_ids = set()
@@ -62,19 +64,22 @@ async def forward_posts():
                     with open(offset_file, 'w') as f:
                         f.write(str(post.id + 1))
 
-                    await asyncio.sleep(7200)  # 2 hours delay per post 
+                await asyncio.sleep(7200)  # 1-second delay
 
             except errors.FloodWaitError as e:
                 print(f"Flood wait error. Sleeping for {e.seconds} seconds.")
                 await asyncio.sleep(e.seconds)
             except errors.RPCError as e:
                 print(f"RPC error: {e}")
-                continue  # Continue processing next posts on RPC error
+                break  # Stop the code on RPC error
             except Exception as e:
                 print(f"An error occurred: {e}")
-                continue  # Continue processing next posts on any other error
+                # Clear the offset file
+                with open(offset_file, 'w') as f:
+                    f.write('0')
+             # Stop the code on any other error
 
-if __name__ == '__main':
+if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     while True:
         try:
@@ -82,4 +87,3 @@ if __name__ == '__main':
         except KeyboardInterrupt:
             print("Bot stopped by the user.")
             break
-            
