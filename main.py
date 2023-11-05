@@ -7,7 +7,7 @@ from creds import api_id, api_hash, session_string, source_channel_id, destinati
 
 
 # Define the file to store the last offset and the set to store forwarded post IDs
-offset_file = 'last_offset.txt'
+offset_file = 'offset.txt'
 forwarded_post_ids = set()
 
 async def remove_forward_tag(post_text):
