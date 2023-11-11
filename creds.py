@@ -1,6 +1,6 @@
 # Replace with your own values
-api_id = ''
-api_hash = ''
-session_string = ''
-source_channel_id = ''
-destination_channel_id = ''
+api_id = '25326793'
+api_hash = '0e409c95f7ac26e38037478b4edcf392'
+session_string = '1BVtsOHMBu0WIwedrFaRGEqBhAV285Xg8sYkSJW4OBk83JO0Db-0lDYMNiB_62uulSKcrVVs60MxpBvsq2XbvUP847sSro5ED6_zV5gc2IZdBVDyIToqdbtIaL3zYN30gSUh4w5Ttlu4a_aygiQTVwz2mqUgqpcOBV8EqOTCaCJVDsd3T8tWljAk1wxaj9TCSloDT746WvZyQvgkbHlQAHwvIXQtT37qZElVuYZpf-weXbp2VDSj89INA2_z7OdcWEIv_gm7oXPzNApJs_OjGzcvmY0gAguoZtriYd8OMs5rfbSgfiBDJtk9xhAehVEVjgkdJ62K5W6XN5HAEZYB4T40o6gIP7C8='
+source_channel_id = '-1001659890454'
+destination_channel_id = '-1002129106853'
