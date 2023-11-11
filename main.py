@@ -17,7 +17,7 @@ async def forward_posts():
          if os.path.exists(offset_file):
             with open(offset_file, 'r') as f:
                 offset = int(f.read())
-        else:
+         else:
             offset = 0  # Start forwarding from the first post
 
         if offset == 0:
