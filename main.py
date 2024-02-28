@@ -64,7 +64,7 @@ async def forward_posts():
                     with open(offset_file, 'w') as f:
                         f.write(str(post.id + 1))
 
-                await asyncio.sleep(7200)  # 1-second delay
+                await asyncio.sleep(3600)  # 1-second delay
 
             except errors.FloodWaitError as e:
                 print(f"Flood wait error. Sleeping for {e.seconds} seconds.")
